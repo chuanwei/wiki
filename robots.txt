@@ -5,3 +5,4 @@ Disallow: /css/
 Disallow: /vendor/
 Disallow: /content.json
 Disallow: /404.html
+Disallow: /404.html
