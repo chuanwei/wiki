@@ -8,6 +8,14 @@ categories:
 tags: [git,code]
 ---
 
+# 配置
+```
+git config --global user.name ""
+git config --global user.email ""
+取消
+git config --global --unset user.name
+git config --global --unset user.email
+```
 
 # 配置ssh密钥
 ```
@@ -18,6 +26,15 @@ Windows ：C:\Users\username\.ssh
 最后把公钥id_rsa.pub的内容添加到 GitHub
 ```
 
+# 添加远程仓库
+```
+添加远程仓库地址命令：
+git remote add origin gitxxx
+修改远程仓库地址：
+git remote set-url origingitxxx
+如果要生成多个ssh key,手写路径和文件名不要直接确认。
+Enter file in which to save the key (/c/Users/xxx/.ssh/id_rsa): /c/Users/xxx/.ssh/id_rsa-xxx
+```
 
 # 常用命令
 
