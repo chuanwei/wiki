@@ -75,7 +75,7 @@ var _hmt = _hmt || [];
                     <span class="STYLE1"></span>已经是……</span>
                     <div id="clock-together"></div>
               </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
+                <canvas id="canvas" width="1100" height="710"></canvas>
             </div>
             
         </div>
@@ -184,13 +184,13 @@ var _hmt = _hmt || [];
         }));
 
         var moveAnimate = eval(Jscex.compile("async", function () {
-            tree.snapshot("p1", 240, 0, 610, 680);
+            tree.snapshot("p1", 240, 0, 610, 710);
             while (tree.move("p1", 500, 0)) {
                 foot.draw();
                 $await(Jscex.Async.sleep(10));
             }
             foot.draw();
-            tree.snapshot("p2", 500, 0, 610, 680);
+            tree.snapshot("p2", 500, 0, 610, 710);
 
             // 会有闪烁不得意这样做, (＞﹏＜)
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
