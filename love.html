@@ -1,6 +1,3 @@
----
-layout: false
----
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>淡淡的思念</title>	    
@@ -66,14 +63,17 @@ var _hmt = _hmt || [];
                         <span class="say"></span><br>
 <span class="say"><font color="228567">陪伴在你身边</font></span><br>
 <span class="say"><font color="228567">一直守护你，永远爱着你</font></span><br>
-、
                         <span class="say"><span class="space"></span></span>
       </div>
                 </div>
                 <div id="clock-box">
                     <span class="STYLE1"></span><font color="#33CC00">亲爱的，我喜欢你</font>
-<span class="STYLE1">已经是……</span>
+                    <span class="STYLE1">已经是……</span>
                   <div id="clock"></div>
+                  <!-- 添加第二个时钟 -->
+                    <span class="STYLE1"></span><font color="#33CC00">亲爱的，我们在一起</font>
+                    <span class="STYLE1"></span>已经是……</span>
+                    <div id="clock-together"></div>
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
@@ -210,19 +210,17 @@ var _hmt = _hmt || [];
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
-		    var together = new Date();
-		    together.setFullYear(2014,02,24); 			//时间年月日
-		    together.setHours(21);						//小时	
-		    together.setMinutes(45);					//分钟
-		    together.setSeconds(4);					//秒前一位
-		    together.setMilliseconds(1);				//秒第二位
+		    var together = new Date("2014-03-24T21:45:04+08:00");
+            var togetherDate = new Date("2014-05-26T22:07:00+08:00");
 
 		    $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
+                timeElapseTogether(togetherDate);
                 $await(Jscex.Async.sleep(1000));
             }
+
         }));
 
         var runAsync = eval(Jscex.compile("async", function () {
